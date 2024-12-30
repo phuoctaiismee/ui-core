@@ -7,7 +7,7 @@ import { Loader } from "lucide-react";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-const page = () => {
+const CategoryPage = () => {
   const { data, isLoading } = useGetListCategoriesQuery({ query: "" });
   const dispatch = useDispatch();
   useEffect(() => {
@@ -22,4 +22,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default CategoryPage;
