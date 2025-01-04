@@ -1,6 +1,7 @@
 import { IGlobalLayoutProps } from "@/types";
 import StoreProvider from "./store-provider";
 import { ThemeProvider } from "./theme-provider";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 export const AppProvider = ({ children }: IGlobalLayoutProps) => {
   return (
@@ -11,7 +12,9 @@ export const AppProvider = ({ children }: IGlobalLayoutProps) => {
         enableSystem
         disableTransitionOnChange
       >
-        {children}
+        <TooltipProvider>
+          {children}
+        </TooltipProvider>
       </ThemeProvider>
     </StoreProvider>
   );
